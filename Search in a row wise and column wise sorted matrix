@@ -1,0 +1,25 @@
+public class Solution {
+    public int solve(ArrayList<ArrayList<Integer>> A, int B) {
+        if(A.get(0).size()==0)
+            return -1;
+        int i=0;
+        int j=A.get(0).size()-1;
+        int res = Integer.MAX_VALUE;
+        boolean gotTheNumber = false;
+        while(i < A.size() && j>=0){
+            if(A.get(i).get(j)== B){
+                res = Math.min(res,(i+1)*1009 + (j+1));
+                gotTheNumber = true;
+                j--;
+                //return res;
+            } else if(A.get(i).get(j)>B){
+                j--;
+            } else {
+                i++;
+            }
+        }
+        if(gotTheNumber)
+            return res;
+        return -1;
+    }
+}
