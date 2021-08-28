@@ -1,0 +1,45 @@
+public class Solution {
+    public int[][] generateMatrix(int A) {
+        int i=0;
+        int j=0;
+        int k=1;
+        int dir =0;
+        int[][] matrix = new int[A][A];
+        if(A==0)
+            return matrix;
+        while(k<= A*A){
+            matrix[i][j]=k;
+            k++;
+            if(dir==0){
+                j++;
+                if(j==A || matrix[i][j]!=0){
+                    dir=1;
+                    j--;
+                    i++;
+                }
+            } else if(dir == 1){
+                i++;
+                if(i==A ||matrix[i][j]!=0){
+                    dir=2;
+                    i--;
+                    j--;
+                }
+            } else if(dir ==2){
+                j--;
+                if(j<0 || matrix[i][j]!=0){
+                    dir=3;
+                    j++;
+                    i--;
+                }
+            } else if(dir== 3) {
+                i--;
+                if(i<0 || matrix[i][j]!=0){
+                    dir=0;
+                    i++;
+                    j++;
+                }
+            }
+        }
+        return matrix;
+    }
+}
