@@ -1,0 +1,21 @@
+public class Solution {
+    public int[][] solve(int A) {
+        int[][] resMatrix = new int[A][A];
+        if(A==0)
+            return resMatrix;
+        
+        for(int i=0;i<A;i++){
+            int k=1;
+            int j=A-1;
+            int m=0;
+            while(m<=i){
+                resMatrix[i][j] =k;
+                j--;
+                k++;
+                m++;
+            }
+        }
+        return resMatrix;
+        
+    }
+}
