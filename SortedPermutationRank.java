@@ -6,28 +6,21 @@ Note: The answer might not fit in an integer, so return your answer % 1000003
 public class Solution {
     public int findRank(String A) {
         int len = A.length();
-        int mul = fact(len);
         int rank = 1;
         int countRight;
         
-        for(int i=0;i<len;++i){
-            mul/=len-i;
-            countRight = findSmallerInRight(A,i,len-1);
-            rank +=(countRight*mul)%1000003;
+        for(int i=0; i<len-1;i++){
+            countRight=0;
+            for(int j=i+1;j<len;j++){
+            if(A.charAt(j)<A.charAt(i))
+                ++countRight;                
+            }
+            rank += ( (countRight*fact(len-i-1)) )%1000003;
         }
         return rank%1000003;
     }
     
     public static int fact(int n){
-        return (n<=1)?1:n*fact(n-1)%1000003;
-    }
-    
-    public static int findSmallerInRight(String s, int l, int r){
-        int countRight = 0;
-        for(int i=l+1;i<=r;++i){
-            if(s.charAt(i)<s.charAt(l))
-                ++countRight;
-        }
-        return countRight;
+        return (n<=1)?1:(n*fact(n-1))%1000003;
     }
 }
