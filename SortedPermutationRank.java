@@ -13,13 +13,13 @@ public class Solution {
         for(int i=0;i<len;++i){
             mul/=len-i;
             countRight = findSmallerInRight(A,i,len-1);
-            rank = (rank%1000003 + (countRight*mul)%1000003)%1000003;
+            rank +=(countRight*mul)%1000003;
         }
-        return rank;
+        return rank%1000003;
     }
     
     public static int fact(int n){
-        return (n<=1)?1:n*fact(n-1);
+        return (n<=1)?1:n*fact(n-1)%1000003;
     }
     
     public static int findSmallerInRight(String s, int l, int r){
