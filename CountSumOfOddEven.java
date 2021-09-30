@@ -19,7 +19,8 @@ public class Solution {
         for(int i =0;i< A.size(); i++){
             if(i%2!=0) ro-=A.get(i);
             else re-=A.get(i);
-            if(lo+re == le+ro) count++;
+            if(lo+re == le+ro) count++
+            //now A.get(i) will start contributing in my le and lo, so we will add accordingly
             if(i%2!=0) lo+=A.get(i);
             else le+=A.get(i);
         }
