@@ -1,5 +1,7 @@
 public class Solution {
     int[] table;
+    // B= "adhbcfeg...
+    // table[] = {0,3,4,2,6,5,7...
     public int solve(String[] A, String B) {
         table = new int[26];
         for(int i=0;i<B.length();i++) table[B.charAt(i)-'a'] = i;
