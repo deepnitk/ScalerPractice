@@ -17,6 +17,7 @@ public class Solution {
             noOfNodes++;
         }
         int k= (noOfNodes/2)+1;
+        if(k==1) return null;
         ListNode prev=null;
         ListNode nxt =null;
         ListNode curr=head;
