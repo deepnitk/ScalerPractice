@@ -1,3 +1,5 @@
+// T.C: O(N^2) S.C: O(N)
+
 public class Solution {
     public int solve(String A, int B) {
         int ans = 0;
@@ -20,4 +22,31 @@ public class Solution {
     }
 }
 
-// T.C: O(N^2) S.C: O(N)
+// T.C: O(N) S.C: O(N)
+public class Solution {
+    public int solve(String A, int B) {
+        int ans = 0;
+        int n = A.length();
+        int xr = 0;
+        ArrayList<Integer> temp = new ArrayList<>(Collections.nCopies(n,0));
+
+        int i =0;
+        for(i = 0;i<=n-B;i++){
+            xr^=temp.get(i);
+            if((A.charAt(i)=='0' && xr == 0) || (A.charAt(i)=='1' && xr == 1)) {
+                ans++;
+                if(i+B < n) temp.set(i+B,1);
+                xr=1-xr;
+            }
+        }
+        while(i<n){
+            xr^=temp.get(i);
+            int val = A.charAt(i)-'0';
+            val^=xr;
+            if(val == 0) return -1;
+            i++;
+        }
+        return ans;
+    }
+}
+
