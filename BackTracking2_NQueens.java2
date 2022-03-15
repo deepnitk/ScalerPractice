@@ -1,0 +1,46 @@
+public class Solution {
+	public ArrayList<ArrayList<String>> solveNQueens(int n) {
+        char[][] board = new char[n][n];
+        for(int i =0;i< n;i++)
+            for(int j=0;j<n;j++)
+                board[i][j]='.';
+        ArrayList<ArrayList<String>> res = new ArrayList<ArrayList<String>>();
+        int leftRow[] = new int[n];
+        int leftDiagonals[] = new int[2*n-1];
+        int rightDiagonals[] = new int[2*n-1];
+        solve(0,board, res, leftRow, leftDiagonals, rightDiagonals);
+        return res;
+	}
+
+    private void solve(int col, char[][] board, ArrayList<ArrayList<String>> res, int leftRow[], 
+        int leftDiagonals[], int rightDiagonals[]){
+
+            if(col == board.length){
+                res.add(construct(board));
+                return;
+            }
+
+            for(int row = 0; row<board.length; row++){
+                if(leftRow[row]==0 && leftDiagonals[row+col]== 0 && rightDiagonals[board.length-1 + col - row] == 0){
+                    board[row][col] = 'Q';
+                    leftRow[row] = 1;
+                    leftDiagonals[row+col] = 1;
+                    rightDiagonals[board.length-1 + col - row] = 1;
+                    solve(col+1, board, res, leftRow, leftDiagonals, rightDiagonals);
+                    board[row][col] = '.';
+                    leftRow[row] = 0;
+                    leftDiagonals[row+col] = 0;
+                    rightDiagonals[board.length-1 + col - row] = 0;
+                }
+            }
+        }
+
+        private ArrayList<String> construct(char[][] board){
+            ArrayList<String> res = new ArrayList<>();
+            for(int i=0;i<board.length;i++){
+                String s = new String(board[i]);
+                res.add(s);
+            }
+            return res;
+        }
+}
