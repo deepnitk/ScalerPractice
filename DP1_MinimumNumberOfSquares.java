@@ -1,3 +1,4 @@
+// Recursive solution
 public class Solution {
     
     public int countMinSquares(int A) {
@@ -17,3 +18,24 @@ public class Solution {
         return dp.get(n);
     }
 }
+
+//Iterative solution
+public class Solution {
+    
+    public int countMinSquares(int A) {
+        ArrayList<Integer> dp = new ArrayList<Integer>(Collections.nCopies(A+1, -1));
+        dp.set(0,0);
+        dp.set(1,1);
+        for(int i=2;i<=A;i++){
+            dp.set(i,i);
+            for(int x=1;x*x<=i;x++){
+                dp.set(i, Math.min(dp.get(i), 1+ dp.get(i-x*x)));
+            }
+        }
+        return dp.get(A);
+    }
+
+   
+}
+// T.C: O(N*sqrt(N))
+// S.c: O(N)
