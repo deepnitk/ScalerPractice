@@ -28,3 +28,35 @@ public class Solution {
     }
 
 }
+
+//Space Optimization
+// T.C: O(N)
+// S.C: O(1)
+public class Solution {
+    int maxSum = Integer.MIN_VALUE;
+    public int adjacent(ArrayList<ArrayList<Integer>> A) {
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for(int i=0;i<A.get(0).size();i++){
+            arr.add(Math.max(A.get(0).get(i), A.get(1).get(i)));
+        }
+        int n = arr.size(); 
+        return getMaxSum(n, arr);
+    }
+    
+    private int getMaxSum(int n, ArrayList<Integer> arr){
+        int prev = arr.get(0);
+        int prev2 = 0;
+        for(int i=1;i<n;i++){
+            int pick = arr.get(i);
+            if(i>1) pick+=prev2;
+            int dontPick = 0+ prev;
+            int curri = Math.max(pick, dontPick);
+            prev2= prev;
+            prev = curri;
+        }
+        return prev;
+    }
+
+}
+
+
