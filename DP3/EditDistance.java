@@ -17,6 +17,7 @@ public class Solution {
         if(A.charAt(i) == B.charAt(j))
             return dp[i][j] = minOp(A,B, i-1, j-1, dp);
         else
+            //(i-1, j) : delete; (i,j-1): insert; (i-1,j-1): replace
             return dp[i][j] = 1 + Math.min(
                 minOp(A,B, i-1, j, dp), 
                 Math.min(minOp(A,B, i, j-1, dp), minOp(A,B, i-1, j-1, dp)));
