@@ -16,7 +16,8 @@ public class Solution {
 }
 
 //Memoization
-
+//TC:O(N*W)
+//SC: O(N*W) + O(N)
 public class Solution {
     public int solve(int[] values, int[] weights, int capacity) {
         int[][] dp = new int[values.length+1][capacity+1];
