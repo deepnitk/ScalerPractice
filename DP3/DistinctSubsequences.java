@@ -21,7 +21,8 @@ class Solution {
 }
 
 //Memoization solution
-// TC: O(
+//TC: O(N*M)
+//SC: O(N*M) + O(N+M)
 
 class Solution {
     public int numDistinct(String s, String t) {
