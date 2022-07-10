@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d082574-86dc-479e-96a0-98bb11a4178e" name="Changes" comment="OOP 2">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constructorchaining/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constructorchaining/B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constructorchaining/C.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constructorchaining/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Carnivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Herbivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Mammal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Omnivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/overloading/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/overloading/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/overriding/A.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/overriding/B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/overriding/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polymorphism/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polymorphism/Mentor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polymorphism/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polymorphism/TA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polymorphism/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractclasses/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractclasses/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractclasses/Mentor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractclasses/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abstractclasses/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,21 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ratnadek/Documents/Scalar Notes/LLD/LldPractice/src/constructor&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/ratnadek/Documents/Scalar Notes/LLD/LldPractice/src/abstractclasses",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/abstractclasses" />
       <recent name="$PROJECT_DIR$/src/constructor" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -165,7 +149,8 @@
       <updated>1657081497901</updated>
       <workItem from="1657177493977" duration="6700000" />
       <workItem from="1657282313419" duration="3260000" />
-      <workItem from="1657338568772" duration="4346000" />
+      <workItem from="1657338568772" duration="4804000" />
+      <workItem from="1657459802101" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="Finish Intro to OOP class">
       <created>1657082520833</created>
