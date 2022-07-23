@@ -10,9 +10,9 @@ public class Solution {
         }
 
         int[] divisor_array = new int[max+1];
-        divisor_array[1] = 1;  //Setting number of divisor of 1 as 1
+        divisor_array[1] = 1;  //Setting number of divisor of 1 as 1.
 
-        //Setting initial divisors as 2 as all numbers will have at least 2 divisors i.e. 1 and itself
+        //Setting initial divisors as 2 as all numbers will have at least 2 divisors i.e. 1 and itself.
         for(int j=2;j<divisor_array.length;j++){
             divisor_array[j] = 2;
         }
@@ -25,7 +25,7 @@ public class Solution {
             }
         }
 
-        //Fetching the values of numbers in array directly from divisor_array into the output array
+        //Fetching the values of numbers in array directly from divisor_array into the output array.
         for(int c = 0;c<A.length;c++){
             A[c] = divisor_array[A[c]];
         }
