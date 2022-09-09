@@ -1,4 +1,4 @@
-package constructor;
+package oops.constructor;
 
 public class Student {
     String name;
@@ -13,7 +13,7 @@ public class Student {
         this.address = address;
     }
 
-    //Copy constructor
+    //Copy oops.constructor
     Student(Student other) {
         this.name = other.name;
         this.address = other.address;
